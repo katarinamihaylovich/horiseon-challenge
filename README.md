@@ -10,4 +10,4 @@ This project was about...
 1. html
 2. css
 
-
+![](/images/image1.png)
