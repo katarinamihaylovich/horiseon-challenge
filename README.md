@@ -11,3 +11,5 @@ This project was about...
 2. css
 
 ![](/images/image1.png)
+
+![](/images/image2.png)
