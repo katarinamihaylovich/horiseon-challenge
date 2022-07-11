@@ -8,23 +8,33 @@ body {
     background-color: #d9dcd6;
 }
 
-.header {
+/* Removed the . before "header" because I changed that section from <div> and a class
+of "header" to just be a header section  */
+
+header {
     padding: 20px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     background-color: #2a607c;
     color: #ffffff;
 }
 
-.header h1 {
+/* This h1 tag was already in "header's" family, so h1 can stand on its own. */
+
+h1 {
     display: inline-block;
     font-size: 48px;
 }
 
-.header h1 .seo {
+/* Applied the same logic to .seo as to h1. Also that is a unique class 
+so it didn't need additional "family" information for this style. */
+
+.seo {
     color: #d9dcd6;
 }
 
-.header nav {
+/* Same deletions here for nav styling. Did not need "header" to precede it. */
+
+nav {
     padding-top: 15px;
     margin-right: 20px;
     float: right;
@@ -32,14 +42,21 @@ body {
     font-size: 20px;
 }
 
-.header nav ul {
+/* Same deletions here for ul styling. Did not need "header" or "nav." */
+
+ul {
     list-style-type: none;
 }
 
-.header nav ul li {
+/* Same deletions here for li styling. Did not need "header," "nav," or "ul." */
+
+li {
     display: inline-block;
     margin-left: 25px;
 }
+
+/* I left the following stylings alone because they were specific enough to 
+apply styling to unqiue html elements and were not redundant: lines 60-103. */
 
 a {
     color: #ffffff;
@@ -86,55 +103,42 @@ p {
     background-color: #2589bd;
 }
 
-.benefit-lead {
+/* The next few stylings that were intially included were redundant. The classes
+.benefit-cost, .benefit-lead, and .benefit brand were all separate classes with
+the same stylings. This was unnecessarily repetitive, so I changed all of those classes 
+to just one class (.specific-benefits) in the html, renamed the class in the css as
+necessary, and deleted the remaining, now-outdated rules. */
+
+.specific-benefits {
     margin-bottom: 32px;
     color: #ffffff;
 }
 
-.benefit-brand {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
+/* h3 is a specific section whose rules will apply without being preceded by a class. 
+The additional class information was not necessary, so I deleted it. */
 
-.benefit-cost {
-    margin-bottom: 32px;
-    color: #ffffff;
-}
-
-.benefit-lead h3 {
+h3 {
     margin-bottom: 10px;
     text-align: center;
 }
 
-.benefit-brand h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
+/* I previously consolidated the various ".benefit" classes, so I needed to 
+rename the class heading to .specific-benefits. This rule contains both 
+the class name and "img" because other "imgs" exist in the html with different 
+rules. */
 
-.benefit-cost h3 {
-    margin-bottom: 10px;
-    text-align: center;
-}
-
-.benefit-lead img {
+.specific-benefits img {
     display: block;
     margin: 10px auto;
     max-width: 150px;
 }
 
-.benefit-brand img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
+/* I followed the same steps for this styling as with line 111. I changed
+three classes (search-engine-optimization, online-reputation management,
+and social-media-marketing) to just be under one class (.features) because all three
+separate classes had the same styling and it was too repetitive and unneeded. */
 
-.benefit-cost img {
-    display: block;
-    margin: 10px auto;
-    max-width: 150px;
-}
-
-.search-engine-optimization {
+.features {
     margin-bottom: 20px;
     padding: 50px;
     height: 300px;
@@ -143,58 +147,37 @@ p {
     color: #ffffff;
 }
 
-.online-reputation-management {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
+/* I previously consolidated the various classes mentioned in lines 135-138, so I needed to 
+rename the class heading to .features. This rule contains both the class name and "img" because 
+other "imgs" exist in the html with different rules. */
 
-.social-media-marketing {
-    margin-bottom: 20px;
-    padding: 50px;
-    height: 300px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #0072bb;
-    color: #ffffff;
-}
-
-.search-engine-optimization img {
+.features img {
     max-height: 200px;
 }
 
-.online-reputation-management img {
-    max-height: 200px;
-}
+/* As with previous css edits, the h2 tag can stand alone without being preceded
+by a class because it is unique and does not need additional family information. */
 
-.social-media-marketing img {
-    max-height: 200px;
-}
-
-.search-engine-optimization h2 {
+h2 {
     margin-bottom: 20px;
     font-size: 36px;
 }
 
-.online-reputation-management h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
+/* The section "footer" is a common section and was labeled as a class in the html. 
+It's better to make it an established section rather than a class within <div>. 
+I changed footer from a class to a section and had to modify the corresponding
+css rule so that it would apply. It was just a matter of deleting the . */
 
-.social-media-marketing h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.footer {
+footer {
     padding: 30px;
     clear: both;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     text-align: center;
 }
 
-.footer h2 {
+/* The text in the footer was initially under h2, but I changed it to a new header (h4)
+because the css styling rule for this text in the footer was different from h2's styling.  */
+
+h4 {
     font-size: 20px;
 }
